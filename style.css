@@ -3,7 +3,7 @@
 :root {
     background: #22201c;
     color: #bbb;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: justify;
     --sans: system-ui, amazon_ember, sans-serif;
     --serif: source_serif_pro, serif;
@@ -12,6 +12,16 @@ header {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: solid 1px #444;
+}
+header, h1 {
+    font-variant: all-small-caps;
+}
+time {
+    font-size: large;
+    font-family: serif;
+    font-variant-numeric: oldstyle-nums;
 }
 .recipient address:first-child { margin-bottom: 2em; }
 div.sender {
@@ -19,6 +29,12 @@ div.sender {
     flex-direction: column;
     justify-content: space-between;
     text-align: right;
+}
+h1 {
+    color: #ccc;
+    font-family: var(--serif);
+    margin: 2rem 0;
+    font-size: x-large;
 }
 hr {
     width: 20%;
@@ -30,13 +46,6 @@ body {
     margin: 1rem auto;
     max-width: 650px;
     font-family: var(--sans);
-}
-h1 {
-    color: #ddd;
-    font-family: var(--serif);
-    margin: 4rem 0;
-    font-size: 18pt;
-    text-decoration: underline;
 }
 address { font-style: normal; }
 p { margin: 1.5rem 0; }
