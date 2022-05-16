@@ -1,0 +1,11 @@
+<%
+_import() {
+    local fontdir="fonts/$1"
+    # remove blank lines, rewrite urls
+    sed -e '/^$/d' \
+        -e "s%[[:alnum:]_-]\+.woff2%$fontdir/&%" \
+           < "$fontdir/stylesheet.css"
+}
+%>
+
+<% _import source-serif %>

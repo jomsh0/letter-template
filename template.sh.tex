@@ -1,0 +1,47 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{multicol}
+\setlength{\columnsep}{.8cm}
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{flushright}
+
+\today\\
+\vspace{.5cm}
+\textbf{Sender Name}\\
+sender@email.com\\
+
+\end{flushright}
+
+\noindent
+Recip One\\
+Lawrence, KS
+
+\bigskip\bigskip
+\noindent
+Recip Two\\
+Lawrence, KS\\
+recip@email.com
+
+\bigskip\bigskip
+\begin{multicols}{2}
+[
+	\section*{RE: Subject}
+	\bigskip
+	Hey hey,
+]
+
+<% cmark-gfm --nobreaks --width 80 --smart -t latex letter.md | sed -E 's/\\linethickness/0.5pt/g' %>
+
+\end{multicols}
+
+\bigskip\bigskip
+Sincerely,
+
+\bigskip\bigskip
+\textbf{Sender Name}
+
+\end{document}
