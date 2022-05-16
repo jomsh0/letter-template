@@ -13,7 +13,7 @@ letter.tex: template.sh.tex letter.md
 pub: $(PUB)/index.html $(PUB)/style.css $(PUB)/fonts.css
 conf: confidential.html
 
-index.html: index.sh.html letter.md
+index.html: index.sh.html letter.md redact.sh
 	esh $< | ./redact.sh > $@
 
 confidential.html: index.sh.html letter.md
