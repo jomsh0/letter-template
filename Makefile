@@ -1,6 +1,6 @@
 PUB := _pub
 
-default: index.html fonts.css
+default: pub
 
 pub: $(PUB)/index.html $(PUB)/style.css $(PUB)/fonts.css
 conf: confidential.html
