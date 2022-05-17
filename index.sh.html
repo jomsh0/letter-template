@@ -1,0 +1,41 @@
+<title>Letter</title>
+
+<link rel=stylesheet href='style.css'>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<header>
+
+<div class=sender>
+  <address>
+    <b>Sender Name</b><br>
+    sender@email.com
+  </address>
+
+  <div><time>16 May, 2022</time></div>
+</div>
+
+<div class=recipient>
+  <address>
+    <b>Recip One</b><br>
+    Lawrence, KS
+  </address>
+
+  <address>
+    <b>Recip Two</b><br>
+    Lawrence, KS
+  </address>
+</div>
+
+</header>
+
+<main>
+  <h1>RE: Subject</h1>
+  <p>Hey hey,
+
+  <% cmark-gfm --nobreaks --smart --unsafe letter.md %>
+
+  <p> 
+  <p><i>Sincerely,</i>
+  <p><b>Sender Name</b>
+</main>

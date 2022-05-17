@@ -3,11 +3,13 @@ PUB := _pub
 default: index.html fonts.css
 
 pub: $(PUB)/index.html $(PUB)/style.css $(PUB)/fonts.css
+conf: confidential.html
 
-# sed -E 's/<\/?del>//g'
+index.html: index.sh.html letter.md
+	esh $< | sed -E 's/<del>[^<]+<\/del>/------/g' > $@
 
-index.html: letter.md
-	cmark-gfm --smart --unsafe -e strikethrough $< | sed -E 's/<del>[^<]+<\/del>/------/g' > $@
+confidential.html: index.sh.html letter.md
+	esh $< | sed -E 's/<\/?del>//g' > $@
 
 fonts.css: fonts.sh.css fonts/*/stylesheet.css
 	esh $< > $@
