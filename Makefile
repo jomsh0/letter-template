@@ -4,7 +4,7 @@ default: pub
 pdf: letter.pdf
 
 clean:
-	rm letter.pdf letter.tex index.html confidential.html fonts.css
+	rm -f letter.pdf letter.tex index.html confidential.html fonts.css
 
 letter.pdf: letter.tex
 	tectonic $<
